@@ -1,7 +1,10 @@
 <div class="todo-container">
-    <div class="todo" *ngFor="let todo of todos; let i = index; ">
-        <div class="id">{{ i }}</div>
-        <div class="content">{{ todo.content }}</div>
-        <button>Delete</button>
+    <form (submit)="addNewTodo()">
+        <input type="text" name="inputText" [(ngModel)]="inputText">
+        <input type="submit" value="Add to list">
+    </form>
+    <div *ngFor="let todo of todos; let i = index; " class="todo-item {{ todo.completed ? 'completed' : ''}}">
+        <div class="content" (click)="markAsDone(i)">{{ todo.content }}</div>
+        <button (click) ="deleteTodoItem(i)">Delete</button>
     </div>
 </div>
