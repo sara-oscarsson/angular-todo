@@ -50,9 +50,12 @@ input[type=submit]:hover{
 .btnRemove{
   padding: 5px;
   border-radius: 10px;
-  background-color: rgb(2, 120, 175);
+  background-color: rgb(200, 66, 66);
   border: none;
   box-shadow: 1px 1px 0px 0px black;
   cursor: pointer;
   color: white;
+}
+.btnRemove:hover{
+  box-shadow: none;
 }
